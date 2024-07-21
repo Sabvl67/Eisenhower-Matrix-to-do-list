@@ -1,0 +1,112 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.input-container input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+}
+
+.input-cotainer button {
+  padding: 10px 20px;
+  background-color: #007b00;
+  color: #fff;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.input-container button:hover {
+  background-color: #0056b0;
+}
+
+.todo-container {
+  display: flex;
+  max-width: 800px;
+  width: 100%;
+}
+
+
+.todo-list {
+  flex: 1;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  min-height: 300px;
+  overflow-y: auto;
+}
+
+.todo-list .task-item{
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: move
+}
+
+.todo-list .task-item.dragging {
+  opacity: 0.5;
+}
+
+.eisenhower-matrix {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.matrix-category {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.matrix-category h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.matrix-category:hover {
+  background-color: #e0e0e0;
+}
+
+.matrix-category.drag-over {
+  background-color: #c0c0c0;
+}
+
+.split-container {
+  display: flex;
+  height: 100%;
+}
+
+.panel {
+  flex: 1;
+  padding: 20px;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+.divider {
+  width: 6px;
+  cursor: ew-resize;
+  background-color: #ddd;
+}
+
+.slider {
+  width: 100%;
+  margin-top: 10px;
+}
