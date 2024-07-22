@@ -1,23 +1,45 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh; /* Ensure the body fills the viewport height */
+}
+
+.header {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
+  margin-bottom: 20px;
 }
 
-.input-container input[type="text"] {
-  flex: 1;
+.input-container form {
+  display: flex;
+  align-items: center;
   padding: 10px;
+  font-size: 18px;
+}
+
+.input-container input[type="text"],
+.input-container button,
+.input-container select {
+  padding: 12px;
   font-size: 16px;
   border: 1px solid #ccc;
-  border-radius: 4px 0 0 4px;
+  border-radius: 4px;
 }
 
-.input-cotainer button {
-  padding: 10px 20px;
+.input-container button {
+  padding: 12px 24px;
   background-color: #007b00;
   color: #fff;
   border: none;
@@ -30,49 +52,42 @@ body {
   background-color: #0056b0;
 }
 
-.todo-container {
+.category-select-container {
   display: flex;
-  max-width: 800px;
-  width: 100%;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-
-.todo-list {
-  flex: 1;
-  background-color: #ffffff;
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 8px;
-  min-height: 300px;
-  overflow-y: auto;
-}
-
-.todo-list .task-item{
-  background-color: #f0f0f0;
-  padding: 10px;
-  margin-bottom: 10px;
+.category-select-container select {
+  padding: 12px;
+  font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  cursor: move
-}
-
-.todo-list .task-item.dragging {
-  opacity: 0.5;
 }
 
 .eisenhower-matrix {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  align-items: center;
+  gap: 40px; /* Increased gap between matrix rows */
+  flex-grow: 1; /* Take remaining vertical space */
   padding: 20px;
 }
 
+.matrix-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* Increased gap between matrix categories */
+}
+
 .matrix-category {
-  background-color: #f0f0f0;
-  padding: 20px;
+  background-color: #ffffff;
   border: 1px solid #ccc;
   border-radius: 8px;
-  cursor: pointer;
+  padding: 20px;
+  width: 45%; /* Adjust width to fit 2x2 layout */
+  max-width: calc(50% - 40px); /* Adjust maximum width as needed */
+  text-align: center;
 }
 
 .matrix-category h3 {
@@ -84,29 +99,39 @@ body {
   background-color: #e0e0e0;
 }
 
-.matrix-category.drag-over {
-  background-color: #c0c0c0;
-}
-
-.split-container {
+.task-item {
   display: flex;
-  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  background-color: #f0f0f0;
 }
 
-.panel {
+.task-item .task-actions {
+  display: flex;
+}
+
+.task-item .task-text {
   flex: 1;
-  padding: 20px;
-  overflow: auto;
-  box-sizing: border-box;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-.divider {
-  width: 6px;
-  cursor: ew-resize;
+.task-item .task-text.completed {
+  text-decoration: line-through;
+}
+
+.task-item .action-btn {
+  margin-left: 8px;
+  padding: 4px 8px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.task-item .action-btn:hover {
   background-color: #ddd;
-}
-
-.slider {
-  width: 100%;
-  margin-top: 10px;
 }
