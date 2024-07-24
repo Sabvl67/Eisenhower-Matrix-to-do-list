@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-color: #e6eaff;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -9,7 +9,7 @@ body {
 }
 
 .header {
-  background-color: #ffffff;
+  background-color: #ccd5ff;
   padding: 20px;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -40,7 +40,7 @@ body {
 
 .input-container button {
   padding: 12px 24px;
-  background-color: #007b00;
+  background-color: #4d6cff;
   color: #fff;
   border: none;
   border-radius: 0 4px 4px 0;
